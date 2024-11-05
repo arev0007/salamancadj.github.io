@@ -1,0 +1,554 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "astoria-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #050520;
+  color: #FFFFFF;
+ 
+  margin: 0;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: 'Fieldstones-Bold-BF64e566a875f27';
+  src: url('/Users/mac/Downloads/fieldstones-font-family-1693304778-0.ttf') format('truetype'),
+       url('path/to/your/font.woff') format('woff');
+}
+
+
+.about-description, .service-description{
+  font-family: "astoria-sans", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+/* Logo */
+.logo-container {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  margin-top: 20px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio and prevent stretching */
+}
+/* Navigation */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0; /* Set the navbar to the far right */
+  padding: 40px;
+  z-index: 1;
+  width: 100%; /* Optional: full width for alignment flexibility */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: flex-end; /* Align the entire nav to the right */
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px; /* Add space between menu items */
+  margin-left: auto; /* Push items to the right */
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Banner */
+
+.button-banner {
+  position: absolute;
+  bottom: 180px;
+  left: 120px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.banner{
+  width: auto;
+}
+
+.button-banner:hover, .button-about:hover {
+  background-color: rgb(62, 59, 88);
+  border-color: rgb(62, 59, 88);
+  color: rgb(81, 71, 103);
+}
+
+h2{
+  text-transform: uppercase;
+}
+
+
+/* About */
+
+.about {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap to the next line on smaller screens */
+}
+
+.nexts {
+  position: absolute;
+  top: 2200px;
+  left: 250px;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  background: #050520;
+  margin-top: 50px;
+}
+.button-about {
+  margin-top: 25px;
+}
+
+.about-description {
+  font-size: 20px;
+}
+
+/* Upcoming */
+
+.upcoming {
+  margin: 0;
+}
+
+.upcoming-back {
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.col-sm-3 {
+  margin-left: 30px;
+}
+
+.img-gallery img {
+  width: 200px;
+  height: 200px;
+}
+
+.specials {
+  width: 300px;
+  height: 300px;
+}
+
+.upcoming-description {
+  display: flex; /* Added flexbox for horizontal alignment */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  
+}
+
+.button-container { 
+  display: flex;
+  align-items: center; /* Vertically align text and button */
+}
+
+.button-upcoming { 
+  margin-left: 10px;  /* Adjust spacing between text and button */
+}
+
+.custom-button {
+  background-color: #D1462F;
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer; /* Indicate that clicking is possible */
+}
+
+.custom-button a{
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.custom-button {
+  display: inline-block;
+  margin-left: auto; /* Align button to the right */
+}
+
+.custom-button:hover{
+  background-color:  #9d2814;
+  color: white;
+}
+
+.upcoming-event {
+  width: 180px;
+  height: 180px;
+}
+.btn-upc-text{
+  font-size:20px ;
+}
+.button-upcoming i {
+  font-size: 50px;
+  color:#D1462F;
+}
+/* footprints*/
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+}
+
+.video-row {
+  display: flex;
+}
+
+.video-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#video1, #video2{
+  padding: 15px;
+}
+
+
+.video-column:first-child {
+  flex: 1;
+}
+
+.video-column:last-child {
+  flex: 2;
+}
+
+/* dj services*/
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 150px;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  background-color: #1C1C31;
+  color: #F1F2FF;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  height: 600px;
+}
+
+.card-img-top {
+  width: 100%; /* Make the image occupy the full width of the card */
+  height: auto; /* Adjust height as needed */
+  object-fit: cover; /* Ensure the image fills the container */
+}
+
+.card-body {
+  padding: 10px;
+  background-color: rgba(28, 28, 49, 0.8); /* Semi-transparent background */
+}
+
+.card-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.button-banner{
+  font-size: 18px;
+}
+.button-banner i {
+  margin-left: 10px;
+}
+
+.card-btn{
+  position: relative;
+  top: 160px;
+  right:110px;
+}
+
+
+/* latest events*/
+
+img{
+	max-width: 100%;
+}
+.gallery{
+	padding: 80px 0;
+}
+.gallery img{
+	
+	padding: 15px;
+  height: 300px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#gallery-modal .modal-img{
+	width: 100%;
+}
+
+/* testimonies*/
+/* Posicionar todos los elementos en el mismo contenedor */
+.position-relative {
+  position: relative;
+  overflow: hidden; /* Prevent overflow within this container */
+}
+
+
+.gradient {
+  background: linear-gradient(135deg, #050520, #F1F2FF);
+  opacity: 0.8; 
+  width: 100%;
+  height: 750px;
+  position: relative; /* Mantain the gradient at the back */
+  z-index: 1; 
+}
+
+
+.bck {
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 10%;
+  width: 100%;
+  height: 750px;
+  object-fit: cover; 
+  opacity: 0.3; 
+  z-index: 2; 
+}
+
+#carouselExampleControls {
+  position: relative;
+  z-index: 3;
+  margin-top: -70vh; 
+}
+
+.carousel{
+  padding: 250px;
+}
+
+.title-testimonials{
+  position: absolute;
+  left:40%;
+  margin-top: 30px;
+  text-align: center;
+  z-index: 3; 
+  color: white; 
+  
+}
+
+/* stream*/
+
+.stream-icon i {
+  font-size: 3.5rem; 
+}
+
+
+.stream-icon {
+  padding: 0.5rem;
+  text-decoration: none; /* Quita el subrayado */
+  outline: none; /* Quita el borde de enfoque */
+  border: none; /* Quita cualquier borde adicional */
+ 
+}
+
+
+
+/* contact*/
+.data-contact{
+  position: relative;
+  overflow: hidden; /* To ensure the background image does not affect layout */
+}
+
+.contact-section{
+  margin-left: 40px;
+}
+
+.bck-co {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the full area */
+  z-index: 0;
+  opacity: 0.3;
+}
+.overlay-column {
+  position: relative;
+  overflow: hidden; /* Ensures the overlay stays within the .overlay-column bounds */
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(9, 7, 26, 0.5); /* Adjust opacity here */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  z-index: 1;
+}
+
+.contact-section, .contact, .social{
+  position: relative;
+  z-index: 2; /* Ensures content stays above the overlay */
+  color: white;
+}
+
+.data-contact {
+  padding: 30px; /* Optional padding */
+   margin: 15px;
+}
+
+form {
+  max-width: 600px; /* Adjust this width as needed */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+}
+
+form label {
+  font-size: 1.2em; /* Larger label text */
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"], form textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* More padding for larger inputs */
+  font-size: 1em; /* Larger font size */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form input[type="text"], 
+form input[type="email"], 
+.form-control {
+  color: rgb(147, 147, 150); /* Set the text color of the input values to gray */
+}
+
+
+form textarea {
+  resize: vertical; /* Allow resizing vertically */
+  min-height: 150px; /* Increase initial height */
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em; /* Larger submit button text */
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+.form-group{
+  margin: 0;
+}
+
+.contact-section h5, .contact-section h6{
+  margin-left:15px;
+}
+
+.btn-form{
+  font-size: 24px;
+}
+
+
+.contact h3, .contact h5, .social h3{
+  text-align: center;
+  margin: 25px;
+  text-transform:uppercase;
+}
+
+.contact, .social{
+  text-align: center;
+}
+
+.contact {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  text-align: center;
+}
+
+.qrcode{
+  width: 260px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+.contact-item {
+  display: flex;
+  align-items: center; /* Vertically center icon and text */
+  justify-content: center; /* Center horizontally within the container */
+  gap: 10px; /* Space between icon and text */
+  margin-bottom: 20px; /* Space between contact items */
+}
+
+.contact-item p {
+  margin: 0; /* Remove default margin for consistency */
+  font-size: 22px;
+}
+
+.social{
+  margin-bottom: 20px;
+}
+
+.social a{
+  font-size: 40px;
+  padding: 10px;
+}
+
+footer p{
+text-align: center;
+}
+@media (max-width: 768px) {
+  /* Adjust styles for screens less than 768px wide */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-banner {
+    width: 100%;
+  }
+
+  .about {
+    margin-left: 20px;
+  }
+
+  .img-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }}

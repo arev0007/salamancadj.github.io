@@ -16,16 +16,36 @@ body {
   overflow-x: hidden;
 }
 @font-face {
-  font-family: 'Fieldstones-Bold-BF64e566a875f27';
-  src: url('/Users/mac/Downloads/fieldstones-font-family-1693304778-0.ttf') format('truetype'),
-       url('path/to/your/font.woff') format('woff');
+  font-family: 'Fieldstones-Bold';
+  src: url('./fonts/fieldstones-bold.ttf') format('truetype'),
+       url('./fonts/fieldstones-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fieldstones-Bold', sans-serif;
 }
 
-
 .about-description, .service-description{
-  font-family: "astoria-sans", sans-serif;
+font-family: "astoria-sans", sans-serif;
 font-weight: 300;
 font-style: normal;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* Logo */
@@ -48,15 +68,15 @@ font-style: normal;
   height: 100%;
   object-fit: contain; /* Maintain aspect ratio and prevent stretching */
 }
-/* Navigation */
 
+/* Navigation */
 .navbar {
   position: absolute;
   top: 0;
   right: 0; /* Set the navbar to the far right */
   padding: 40px;
   z-index: 1;
-  width: 100%; /* Optional: full width for alignment flexibility */
+  width: 100%; /* full width for alignment flexibility */
 }
 
 .container-fluid {
@@ -78,11 +98,11 @@ font-style: normal;
 }
 
 /* Banner */
-
-.button-banner {
+.button-banner,
+.button-services {
   position: absolute;
-  bottom: 180px;
-  left: 120px;
+  bottom:60px;
+  left: 126px;
   padding: 20px;
   z-index: 1;
 }
@@ -109,16 +129,7 @@ h2{
   flex-wrap: wrap; /* Allow elements to wrap to the next line on smaller screens */
 }
 
-.nexts {
-  position: absolute;
-  top: 2200px;
-  left: 250px;
-  padding: 20px;
-  width: auto;
-  height: auto;
-  background: #050520;
-  margin-top: 50px;
-}
+
 .button-about {
   margin-top: 25px;
 }
@@ -128,6 +139,17 @@ h2{
 }
 
 /* Upcoming */
+
+.nexts {
+  position: absolute;
+  top: 2100px;
+  left: 250px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  background: #050520;
+  margin-top: 50px;
+}
 
 .upcoming {
   margin: 0;
@@ -176,7 +198,11 @@ h2{
   cursor: pointer; /* Indicate that clicking is possible */
 }
 
+
 .custom-button a{
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
   color:white;
   text-decoration: none;
   font-size: 20px;
@@ -258,7 +284,7 @@ h2{
 
 .card-img-top {
   width: 100%; /* Make the image occupy the full width of the card */
-  height: auto; /* Adjust height as needed */
+  height: auto;
   object-fit: cover; /* Ensure the image fills the container */
 }
 
@@ -289,6 +315,13 @@ h2{
   right:110px;
 }
 
+.button-services {
+  position: absolute;
+  bottom:180px;
+  left: 120px;
+  padding: 20px;
+  z-index: 1;
+}
 
 /* latest events*/
 
@@ -310,7 +343,6 @@ img{
 }
 
 /* testimonies*/
-/* Posicionar todos los elementos en el mismo contenedor */
 .position-relative {
   position: relative;
   overflow: hidden; /* Prevent overflow within this container */
@@ -368,9 +400,9 @@ img{
 
 .stream-icon {
   padding: 0.5rem;
-  text-decoration: none; /* Quita el subrayado */
-  outline: none; /* Quita el borde de enfoque */
-  border: none; /* Quita cualquier borde adicional */
+  text-decoration: none; 
+  outline: none; 
+  border: none;
  
 }
 
@@ -420,12 +452,12 @@ img{
 }
 
 .data-contact {
-  padding: 30px; /* Optional padding */
+  padding: 30px;
    margin: 15px;
 }
 
 form {
-  max-width: 600px; /* Adjust this width as needed */
+  max-width: 600px;
   margin: 0 auto; /* Center the form */
   padding: 20px;
 }
@@ -437,9 +469,9 @@ form label {
 }
 
 form input[type="text"], form textarea {
-  width: 100%; /* Full width */
+  width: 100%; 
   padding: 12px; /* More padding for larger inputs */
-  font-size: 1em; /* Larger font size */
+  font-size: 1em; 
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -447,19 +479,19 @@ form input[type="text"], form textarea {
 form input[type="text"], 
 form input[type="email"], 
 .form-control {
-  color: rgb(147, 147, 150); /* Set the text color of the input values to gray */
+  color: rgb(147, 147, 150); 
 }
 
 
 form textarea {
   resize: vertical; /* Allow resizing vertically */
-  min-height: 150px; /* Increase initial height */
+  min-height: 150px; 
 }
 
 form input[type="submit"] {
   width: 100%;
   padding: 12px;
-  font-size: 1.2em; /* Larger submit button text */
+  font-size: 1.2em; 
   color: #fff;
   background-color: #4CAF50;
   border: none;
@@ -533,6 +565,20 @@ form input[type="submit"]:hover {
 
 footer p{
 text-align: center;
+}
+
+@media (max-width: 576px) {
+  .custom-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .upcoming-description h3, .upcoming-description h4 {
+    font-size: 16px; /* Adjust for small screens */
+    text-align: center;
+  }
+  .button-container {
+    text-align: center; /* Center the button */
+  }
 }
 @media (max-width: 768px) {
   /* Adjust styles for screens less than 768px wide */

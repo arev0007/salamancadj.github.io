@@ -98,10 +98,9 @@ font-style: normal;
 }
 
 /* Banner */
-.button-banner,
-.button-services {
+.button-banner{
   position: absolute;
-  bottom:200px;
+  bottom:180px;
   left: 90px;
   padding: 20px;
   z-index: 1;
@@ -111,7 +110,7 @@ font-style: normal;
   width: auto;
 }
 
-.button-banner:hover, .button-about:hover {
+.button-banner:hover, .button-about:hover, .button-services:hover, .btn-form:hover {
   background-color: rgb(62, 59, 88);
   border-color: rgb(62, 59, 88);
   color: rgb(81, 71, 103);
@@ -142,7 +141,7 @@ h2{
 
 .nexts {
   position: absolute;
-  top: 1700px;
+  top: 1950px;
   left: 125px;
   padding: 15px;
   width: auto;
@@ -341,7 +340,15 @@ img{
 #gallery-modal .modal-img{
 	width: 100%;
 }
+/* latest events*/
 
+.laevents, .video, .djservices{
+  margin-top: 60px;
+}
+.laevents h3{
+  margin-top:5px;
+  padding: 0;
+}
 /* testimonies*/
 .position-relative {
   position: relative;
@@ -577,6 +584,7 @@ footer p{
 text-align: center;
 }
 
+
 @media (max-width: 576px) {
   .custom-button {
     width: 100%;
@@ -589,10 +597,19 @@ text-align: center;
   .button-container {
     text-align: center; /* Center the button */
   }
+
+  .button-banner {
+    bottom: 100px; /* Further adjust the bottom position */
+    left: 20px; /* Further adjust the left position */
+    padding: 10px;
+    font-size: 0.8rem;
+    text-align: center; /* Center text for better readability */
+    width: auto; /* Ensures the button adapts to content width */
+  }
 }
 
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   /* Adjust styles for screens less than 768px wide */
   .navbar-nav {
     flex-direction: column;
@@ -607,15 +624,21 @@ text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
+  .button-banner {
+    bottom: 150px; /* Adjust the bottom position */
+    left: 50px; /* Adjust the left position */
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
 }
 
 
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     .container {
-        max-width: 100%;
-        padding: 15px;
+      padding: 40px;
+      max-width: 1200px; /* Limita el ancho del contenido */
     }
-
 
 
 }

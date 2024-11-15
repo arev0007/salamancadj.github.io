@@ -101,8 +101,8 @@ font-style: normal;
 .button-banner,
 .button-services {
   position: absolute;
-  bottom:60px;
-  left: 126px;
+  bottom:180px;
+  left: 160px;
   padding: 20px;
   z-index: 1;
 }
@@ -142,8 +142,8 @@ h2{
 
 .nexts {
   position: absolute;
-  top: 1900px;
-  left: 250px;
+  top: 1700px;
+  left: 125px;
   padding: 15px;
   width: auto;
   height: auto;
@@ -590,15 +590,13 @@ text-align: center;
     text-align: center; /* Center the button */
   }
 }
-@media (max-width: 768px) {
+
+
+@media (min-width: 760px) {
   /* Adjust styles for screens less than 768px wide */
   .navbar-nav {
     flex-direction: column;
     align-items: center;
-  }
-
-  .button-banner {
-    width: 100%;
   }
 
   .about {
@@ -607,4 +605,17 @@ text-align: center;
 
   .img-gallery {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }}
+  }
+
+}
+
+
+  @media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+
+
+}
